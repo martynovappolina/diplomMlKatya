@@ -1,3 +1,5 @@
+import os
+
 from database import SessionLocal, SQLALCHEMY_DATABASE_URL
 from Api.routers import router
 from fastapi.middleware.cors import CORSMiddleware
@@ -32,4 +34,4 @@ async def db_session_middleware(request: Request, call_next):
 
 if __name__ == "__main__":
     run_migration()
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, port=8000)
