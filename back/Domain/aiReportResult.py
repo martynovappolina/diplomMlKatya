@@ -8,7 +8,6 @@ class AiReportResult(Base):
     __tablename__ = "AiReportResults"
     Id: Mapped[str] = mapped_column(primary_key=True)
     CreateAt: Mapped[datetime] = mapped_column()
-    UserId: Mapped[int] = mapped_column()
     Request: Mapped[str] = mapped_column()
     IsSuccess: Mapped[bool] = mapped_column()
     Sql: Mapped[str] = mapped_column()
