@@ -90,4 +90,4 @@ def create_request(command: str, db: Session = Depends(get_db)):
             Result=result
         ))
         db.commit()
-        return result
+        return rows[0][0]
